@@ -22,6 +22,12 @@
   (flycheck-mode))
 (add-hook 'python-mode-hook 'flycheck-python-setup)
 
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
+;; (when (require 'flycheck nil t)
+;;   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+;;   (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+(add-hook 'python-mode-hook
+          (lambda () (modify-syntax-entry ?_ "w" python-mode-syntax-table)))
+
+(add-hook 'python-mode-hook
+          (lambda () (global-set-key (kbd "H-f") 'elpy-autopep8-fix-code)))
