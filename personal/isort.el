@@ -1,3 +1,4 @@
-(add-to-list 'load-path "~/Code/repos/web")
 (require 'py-isort)
-(add-hook 'before-save-hook 'py-isort-before-save)
+
+(add-hook 'python-mode-hook
+ (lambda ()(add-hook 'before-save-hook 'py-isort-before-save nil 'local)))
