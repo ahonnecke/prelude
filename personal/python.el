@@ -16,7 +16,8 @@
 (global-set-key (kbd "H--") 'string-inflection-underscore)
 (global-set-key (kbd "H-c") 'string-inflection-camelcase)
 
-(setq py-python-command "python3")
+(setq py-python-command "ipython")
+(setq python-shell-interpreter "python3")
 
 (defun flycheck-python-setup ()
   (flycheck-mode))

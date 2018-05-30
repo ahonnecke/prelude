@@ -1,5 +1,5 @@
-(define-key projectile-mode-map (kbd "C-x C-f") 'find-file)
-(define-key projectile-mode-map (kbd "C-x f") 'projectile-find-file)
+(define-key projectile-mode-map (kbd "C-x f") 'find-file)
+(define-key projectile-mode-map (kbd "C-x C-f") 'projectile-find-file)
 (define-key projectile-mode-map (kbd "M-r a") 'ag-regexp-project-at-point)
 (define-key projectile-mode-map (kbd "M-r r") 'ag-project-regexp)
 
@@ -55,4 +55,3 @@
 (global-unset-key (kbd "C-c d"))
 (local-unset-key (kbd "C-c d"))
 (global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region)
-

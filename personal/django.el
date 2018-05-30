@@ -1,17 +1,17 @@
-(setq python-shell-interpreter "pipenv run python"
-      python-shell-interpreter-args "-i /Users/ahonnecke/Code/repos/web/server/manage.py shell_plus")
+;; (setq python-shell-interpreter "pipenv trepan3k"
+;;       python-shell-interpreter-args "-i /Users/ahonnecke/Code/repos/web/server/manage.py shell_plus")
 
 (require 'browse-url)
 (require 'elpy-django)
 
-;;(setq 'elpy-django-always-prompt 'nil)
+;; ;;(setq 'elpy-django-always-prompt 'nil)
 
-(defun django-runopen ()
-  "Starts django and opens localhost in a browser"
-  (interactive)
-  (elpy-django-runserver-quiet)
-  (browse-url "http://localhost:8000/api/admin")
-  )
+;; (defun django-runopen ()
+;;   "Starts django and opens localhost in a browser"
+;;   (interactive)
+;;   (elpy-django-runserver-quiet)
+;;   (browse-url "http://localhost:8000/api/admin")
+;;   )
 
 (defun elpy-django-runserver-quiet ()
   "Start the server and automatically add the ipaddr and port.
@@ -27,9 +27,9 @@ When called with a prefix (C-u), it will prompt for additional args."
     (when (get-buffer buff-name)
       (kill-buffer buff-name))
     (setq cmd (concat cmd " " elpy-django-server-ipaddr ":" elpy-django-server-port))
-    (compile cmd)
+    (compile "pipenv run python3 -m pdb /Users/ahonnecke/Code/repos/web/server/manage.py runserver")
     (with-current-buffer "*compilation*"
       (rename-buffer buff-name))))
 
 
-(global-set-key (kbd "H-s") 'django-runopen)
+;; (global-set-key (kbd "H-s") 'django-runopen)
