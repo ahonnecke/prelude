@@ -1,14 +1,14 @@
 ;(fset 'switch-to-ag-buffer 'switch-to-ag-buffer-2)
 
-;; (define-key projectile-mode-map (kbd "C-M-u") 'open-ag-function-at-point)
-;; (define-key projectile-mode-map (kbd "C-M-r") 'open-ag-regexp-at-point)
-;; (define-key projectile-mode-map (kbd "C-M-c") 'open-ag-class-at-point)
-;; ;(define-key projectile-mode-map (kbd "C-M-t") 'open-ag-thing-at-point)
-;; (define-key projectile-mode-map (kbd "C-M-k") 'open-ag-thing-at-point)
-;; (define-key projectile-mode-map (kbd "C-M-m") 'open-ag-method-at-point)
-;; (define-key projectile-mode-map (kbd "C-M-s") 'open-ag-static-at-point)
-;; (define-key projectile-mode-map (kbd "C-M-v") 'open-ag-thing-at-point-vendor)
-;; (define-key projectile-mode-map (kbd "C-M-j") 'ag-region)
+(define-key projectile-mode-map (kbd "C-M-u") 'open-ag-function-at-point)
+(define-key projectile-mode-map (kbd "C-M-r") 'open-ag-regexp-at-point)
+(define-key projectile-mode-map (kbd "C-M-c") 'open-ag-class-at-point)
+;(define-key projectile-mode-map (kbd "C-M-t") 'open-ag-thing-at-point)
+(define-key projectile-mode-map (kbd "C-M-k") 'open-ag-thing-at-point)
+(define-key projectile-mode-map (kbd "C-M-m") 'open-ag-method-at-point)
+(define-key projectile-mode-map (kbd "C-M-s") 'open-ag-static-at-point)
+(define-key projectile-mode-map (kbd "C-M-v") 'open-ag-thing-at-point-vendor)
+(define-key projectile-mode-map (kbd "C-M-j") 'ag-region)
 
 
 (define-key projectile-mode-map (kbd "H-a") 'open-ag-thing-at-point)
