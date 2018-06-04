@@ -38,8 +38,8 @@
 (global-set-key (kbd "C-c -") 'string-inflection-underscore)
 
 ;; (global-set-key (kbd "C-M-SPC") 'er/expand-region)
-;; (global-set-key (kbd "C-c r") 'replace-string)
-;; (global-set-key (kbd "C-c q") 'query-replace)
+(global-set-key (kbd "C-c r") 'replace-string)
+(global-set-key (kbd "C-c q") 'query-replace)
 
 ;; (global-set-key (kbd "C-c c") 'comment-region)
 ;; (global-set-key (kbd "C-c s") 'comment-region)

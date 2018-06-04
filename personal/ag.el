@@ -11,7 +11,7 @@
 (define-key projectile-mode-map (kbd "C-M-j") 'ag-region)
 
 
-(define-key projectile-mode-map (kbd "H-a") 'open-ag-thing-at-point)
+(define-key projectile-mode-map (kbd "H-a") 'projectile-ag)
 (define-key projectile-mode-map (kbd "H-j") 'ag-region)
 (define-key projectile-mode-map (kbd "H-r") 'ag-project-regexp)
 
@@ -31,5 +31,5 @@
 ; (key-chord-mode +1)
 
 ;; (setq ag-reuse-window 't)
-;; (setq ag-highlight-search t)
+(setq ag-highlight-search t)
 ;; (setq ag-reuse-buffers 't)
