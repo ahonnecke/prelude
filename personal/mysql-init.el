@@ -2,7 +2,23 @@
           (lambda ()
             (toggle-truncate-lines t)))
 
-(load "~/.emacs.d/personal/mysql-login.el")
+;;TODO get this to read from .my.cnf
+(load "~/.mysql-login.el")
+
+;; Of the format
+;; (setq sql-connection-alist
+;;       '((server1 (sql-product 'postgres)
+;;                  (sql-port 5432)
+;;                  (sql-server "localhost")
+;;                  (sql-user "user")
+;;                  (sql-password "password")
+;;                  (sql-database "db1"))
+;;         (server2 (sql-product 'postgres)
+;;                  (sql-port 5432)
+;;                  (sql-server "localhost")
+;;                  (sql-user "user")
+;;                  (sql-password "password")
+;;                  (sql-database "db2"))))
 
 (defun my-local-db ()
   (interactive)
