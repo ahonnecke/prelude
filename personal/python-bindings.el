@@ -39,5 +39,11 @@
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 
-(global-set-key (kbd "H--") 'string-inflection-underscore)
-(global-set-key (kbd "H-c") 'string-inflection-camelcase)
+;;i
+(global-set-key (kbd "M-s-^") 'python-indent-shift-right)
+;;u
+(global-set-key (kbd "M-s-¨") 'python-indent-shift-left)
+
+
+(global-set-key (kbd "M-s->") 'python-indent-shift-right)
+(global-set-key (kbd "M-s-<") 'python-indent-shift-left)

@@ -4,7 +4,7 @@
 (define-key projectile-mode-map (kbd "C-M-r") 'open-ag-regexp-at-point)
 (define-key projectile-mode-map (kbd "C-M-c") 'open-ag-class-at-point)
 ;(define-key projectile-mode-map (kbd "C-M-t") 'open-ag-thing-at-point)
-(define-key projectile-mode-map (kbd "C-M-k") 'open-ag-thing-at-point)
+;(define-key projectile-mode-map (kbd "C-M-k") 'open-ag-thing-at-point)
 (define-key projectile-mode-map (kbd "C-M-m") 'open-ag-method-at-point)
 (define-key projectile-mode-map (kbd "C-M-s") 'open-ag-static-at-point)
 (define-key projectile-mode-map (kbd "C-M-v") 'open-ag-thing-at-point-vendor)
@@ -15,6 +15,11 @@
 (define-key projectile-mode-map (kbd "M-a") 'projectile-ag)
 (define-key projectile-mode-map (kbd "H-j") 'ag-region)
 (define-key projectile-mode-map (kbd "H-r") 'ag-project-regexp)
+;; (define-key projectile-mode-map (kbd "S-p a") 'ag-project-regexp)
+;; (define-key projectile-mode-map (kbd "C-c p a") 'ag-project-regexp)
+;; (define-key projectile-mode-map (kbd "C-M k") 'ag-project-regexp)
+(define-key projectile-mode-map (kbd "M-s-∆") 'open-ag-thing-at-point)
+(define-key projectile-mode-map (kbd "M-s-®") 'ag-regexp-project-at-point)
 
 
 ; (key-chord-define-global "FF" 'ag-function-search)
@@ -33,4 +38,3 @@
 
 ;; (setq ag-reuse-window 't)
 (setq ag-highlight-search t)
-;; (setq ag-reuse-buffers 't)

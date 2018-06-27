@@ -21,7 +21,7 @@
 ;; ;(global-set-key (kbd "M-<return>") 'hippie-expand)
 
 (global-set-key (kbd "C-c c") 'comment-region)
-(global-set-key (kbd "H-c") 'comment-region)
+;;(global-set-key (kbd "H-c") 'comment-region)
 
 (global-set-key (kbd "M-<return>") 'hippie-expand)
 
@@ -40,6 +40,12 @@
 ;; (global-set-key (kbd "C-M-SPC") 'er/expand-region)
 (global-set-key (kbd "C-c r") 'replace-string)
 (global-set-key (kbd "C-c q") 'query-replace)
+
+(global-set-key (kbd "C-c p a") 'ag-project-at-point)
+(global-set-key (kbd "S-p a") 'ag-project-at-point)
+;;a
+(global-set-key (kbd "M-s-å") 'ag-project-at-point)
+
 
 ;; (global-set-key (kbd "C-c c") 'comment-region)
 ;; (global-set-key (kbd "C-c s") 'comment-region)
