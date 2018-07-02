@@ -2,9 +2,9 @@
 
 (require 'string-inflection)
 
-;;Meta Super Shift -
-(global-set-key (kbd "M-s-_") 'string-inflection-underscore)
 ;;s
-(global-set-key (kbd "M-s-ß") 'string-inflection-cycle)
+(global-set-key (kbd "M-s-ß") 'string-inflection-underscore)
 ;;c
-(global-set-key (kbd "M-s-ç") 'string-inflection-camelcase)
+(global-set-key (kbd "M-s-ç") 'string-inflection-all-cycle)
+;;C
+(global-set-key (kbd "M-s-c") 'string-inflection-camelcase)

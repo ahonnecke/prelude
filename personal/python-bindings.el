@@ -40,10 +40,18 @@
 (global-set-key (kbd "M-p") 'backward-paragraph)
 
 ;;i
-(global-set-key (kbd "M-s-^") 'python-indent-shift-right)
+;; (global-set-key (kbd "M-s-^") 'python-indent-shift-right)
 ;;u
-(global-set-key (kbd "M-s-¨") 'python-indent-shift-left)
+;; (global-set-key (kbd "M-s-¨") 'python-indent-shift-left)
 
 
 (global-set-key (kbd "M-s->") 'python-indent-shift-right)
 (global-set-key (kbd "M-s-<") 'python-indent-shift-left)
+
+;; >
+(global-set-key (kbd "M-s-≥") 'python-indent-shift-right)
+;; <
+(global-set-key (kbd "M-s-≤") 'python-indent-shift-left)
+
+;;f
+(global-set-key (kbd "M-s-ƒ") 'py-autopep8-buffer)
