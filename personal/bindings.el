@@ -37,7 +37,8 @@
 (global-set-key (kbd "C-c M") 'string-inflection-camelcase)
 (global-set-key (kbd "C-c -") 'string-inflection-underscore)
 
-;; (global-set-key (kbd "C-M-SPC") 'er/expand-region)
+;;e
+(global-set-key (kbd "M-s-´") 'er/expand-region)
 (global-set-key (kbd "C-c r") 'replace-string)
 (global-set-key (kbd "C-c q") 'query-replace)
 
@@ -45,6 +46,15 @@
 (global-set-key (kbd "S-p a") 'ag-project-at-point)
 ;;a
 (global-set-key (kbd "M-s-å") 'ag-project-at-point)
+
+;;s
+(global-set-key (kbd "M-s-ß") 'search-forward)
+
+
+(global-set-key (kbd "s-a") 'avy-goto-char)
+
+;;l
+(global-set-key (kbd "M-s-¬") 'avy-goto-line)
 
 
 ;; (global-set-key (kbd "C-c c") 'comment-region)

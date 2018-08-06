@@ -34,6 +34,7 @@
   ;; remember to set the sql-product, otherwise, it will fail for the first time
   ;; you call the function
   (setq sql-product product)
+  (sql-rename-buffer)
   (sql-connect connection))
 
 (defun my-local-db ()
@@ -50,4 +51,8 @@
   ;; remember to set the sql-product, otherwise, it will fail for the first time
   ;; you call the function
   (setq sql-product product)
+  (sql-rename-buffer)
   (sql-connect connection))
+
+(add-hook 'sql-interactive-mode-hook
+          (lambda () (sql-rename-buffer)))

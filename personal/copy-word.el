@@ -8,3 +8,5 @@
 (global-set-key (kbd "C-c w") (quote copy-word))
 
 (define-key prelude-mode-map (kbd "C-c w") (quote copy-word))
+
+(global-set-key (kbd "M-s-…") 'er/expand-region)
