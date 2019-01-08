@@ -29,3 +29,4 @@ prelude-cheatsheet.log
 anaconda-mode
 ac-comphist.dat
 *mysql-login.el
+.python-environments/*
