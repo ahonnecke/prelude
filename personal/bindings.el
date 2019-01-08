@@ -42,7 +42,7 @@
 (global-set-key (kbd "C-c r") 'replace-string)
 (global-set-key (kbd "C-c q") 'query-replace)
 
-(global-set-key (kbd "C-c p a") 'ag-project-at-point)
+;;(global-set-key (kbd "C-c p a") 'ag-project-at-point)
 (global-set-key (kbd "S-p a") 'ag-project-at-point)
 ;;a
 (global-set-key (kbd "M-s-å") 'ag-project-at-point)
@@ -60,10 +60,12 @@
 ;;p
 (global-set-key (kbd "M-s-π") 'pre-commit)
 
+;;f
+(global-set-key (kbd "s-f") 'forward-sexp)
+(global-set-key (kbd "s-b") 'backward-sexp)
 
-;; (global-set-key (kbd "C-c c") 'comment-region)
-;; (global-set-key (kbd "C-c s") 'comment-region)
-
+(global-set-key (kbd "M-s-÷") 'comment-region)
+(global-set-key (kbd "M-s-?") 'uncomment-region)
 
 ;; ;(fset 'switch-to-sql-buffer
 ;;       ;(switch-to-buffer "*SQL*"))
@@ -83,3 +85,4 @@
 ;; (global-unset-key (kbd "C-c d"))
 ;; (local-unset-key (kbd "C-c d"))
 ;; (global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region)
+

@@ -42,21 +42,21 @@
 (defun open-ag-method-at-point()
   "search for method usage in project"
   (interactive)
-  (ag-project-at-point (concat "->" (thing-at-point 'word) "("))
+  (ag-project (concat "->" (thing-at-point 'word) "("))
   (open-ag-buffer)
   )
 
-(defun open-ag-project-at-point()
+(defun open-ag-project()
   "search for method usage in project"
   (interactive)
-  (ag-project-at-point (thing-at-point 'word))
+  (ag-project (thing-at-point 'word))
   (open-ag-buffer)
   )
 
 (defun open-ag-static-at-point()
   "search for method usage in project"
   (interactive)
-  (ag-project-at-point (concat "::" (thing-at-point 'word) "("))
+  (ag-project (concat "::" (thing-at-point 'word) "("))
   (open-ag-buffer)
   )
 
@@ -66,7 +66,7 @@
                 (read-string (format "Search for (%s): " (thing-at-point 'symbol))
                              nil nil (thing-at-point 'word))))
   (message "Finding %s!" thing)
-  (if (ag-project-at-point thing)
+  (if (ag-project thing)
       (message "Finding %s!" thing)
     )
   (open-ag-buffer)
@@ -78,7 +78,7 @@
                 (read-string (format "RegExp (%s): " (thing-at-point 'symbol))
                              nil nil (thing-at-point 'word))))
   (message "Finding %s!" regexp)
-  (if (ag-regexp-project-at-point regexp)
+  (if (ag-project-regexp regexp)
       (message "Finding %s!" regexp)
     )
   (open-ag-buffer)
@@ -88,7 +88,7 @@
   "find class and open it"
   (interactive)
   (message "searching for %s" (concat "((class)|(trait)|(interface)) " (thing-at-point 'word) "(\n| )"))
-  (ag-regexp-project-at-point
+  (ag-project-regexp
    (concat "((class)|(trait)|(interface)) " (thing-at-point 'word) "(\n| )"))
   (open-ag-buffer)
   )
@@ -135,12 +135,12 @@
 
 (defun jump-to-window (buffer-name)
   (interactive "bEnter buffer to jump to: ")
-  (let ((visible-buffers (mapcar '(lambda (window) (buffer-name (window-buffer window))) (window-list)))
+  (let ((visible-buffers (mapcar #'(lambda (window) (buffer-name (window-buffer window))) (window-list)))
         window-of-buffer)
     (if (not (member buffer-name visible-buffers))
         (error "'%s' does not have visible window" buffer-name)
       (setq window-of-buffer
-            (delq nil (mapcar '(lambda (window)
+            (delq nil (mapcar #'(lambda (window)
                                  (if (equal buffer-name (buffer-name (window-buffer window)))
                                      window nil)) (window-list))))
       (select-window (car window-of-buffer)))))
@@ -163,24 +163,24 @@
   "find class and open it"
   (interactive "sClass Name:")
   (message "Finding %s!" (concat "class " classname " "))
-  (if (ag-project-at-point (concat "class " classname " "))
+  (if (ag-project (concat "class " classname " "))
       (message "Finding %s!" classname)
     )
   (jump-to-window "*ag search*")
   )
 
-(defun open-ag-file()
-  "switch to the ag results buffer open the first result and then close list"
-  (interactive)
-  (if (switch-to-buffer "*ag search*" t t)
-      (find-file (thing-at-point)))
-  (kill-buffer "*ag search*"))
+;; (defun open-ag-file()
+;;   "switch to the ag results buffer open the first result and then close list"
+;;   (interactive)
+;;   (if (switch-to-buffer "*ag search*" t t)
+;;       (find-file (thing-at-point)))
+;;   (kill-buffer "*ag search*"))
 
-(defun open-ag-file-old()
-  "switch to the ag results buffer open the first result"
-  (interactive)
-  (if (switch-to-buffer "*ag search*" t t)
-      (find-file (file-name-at-point))))
+;; (defun open-ag-file-old()
+;;   "switch to the ag results buffer open the first result"
+;;   (interactive)
+;;   (if (switch-to-buffer "*ag search*" t t)
+;;       (find-file (file-name-at-point))))
 
 ;;this is the best one
 ;;TODO, allow you to type in a value if none selected
@@ -189,7 +189,7 @@
   (interactive (if (use-region-p)
                    (list (region-beginning) (region-end))
                  (list nil nil)))
-  (ag-project-at-point (if (and beg end)
+  (ag-project (if (and beg end)
                            (buffer-substring-no-properties beg end)
                          (thing-at-point 'word)))
   (winner-undo)

@@ -1,3 +1,6 @@
 (find-file "~/Code/repos/web")
 (pipenv-mode)
-(pipenv-activate)
+
+(bookmark-bmenu-list)
+
+;; (pipenv-activate)
