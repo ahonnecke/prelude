@@ -41,6 +41,8 @@
 
 ;; It's all in the Meta
 (setq ns-function-modifier 'hyper)
+(setq mac-escape-modifier 'meta)
+(setq mac-meta-modifier 'esc)
 
 (defun prelude-swap-meta-and-super ()
   "Swap the mapping of Meta and Super.
@@ -58,6 +60,9 @@ Windows external keyboard from time to time."
 
 ;;(define-key prelude-mode-map (kbd "C-c w") 'prelude-swap-meta-and-super)
 (define-key prelude-mode-map (kbd "s-/") 'hippie-expand)
+(define-key prelude-mode-map (kbd "M-RET") 'hippie-expand)
+
+
 
 ;; There's no point in hiding the menu bar on macOS, so let's not do it
 (menu-bar-mode +1)

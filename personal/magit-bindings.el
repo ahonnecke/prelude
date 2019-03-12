@@ -49,3 +49,8 @@
                                      filename))))))
 ;;o
 (global-set-key (kbd "M-s-ø") 'find-file-at-point-with-line)
+
+(setq magit-refresh-status-buffer nil)
+
+(setq auto-revert-buffer-list-filter
+      'magit-auto-revert-repository-buffers-p)

@@ -21,20 +21,23 @@
 ;; (fset 'python-indent-shift-left
 ;;       "\C-c<")
 
-(global-set-key (kbd "H-i") 'indent-region-four)
-(global-set-key (kbd "H-u") 'unindent-region-four)
+;; (global-set-key (kbd "H-i") 'indent-region-four)
+;; (global-set-key (kbd "H-u") 'unindent-region-four)
 
-(global-set-key (kbd "H-i") 'indent-region-four)
-(global-set-key (kbd "H-u") 'unindent-region-four)
+;; (global-set-key (kbd "H-i") 'indent-region-four)
+;; (global-set-key (kbd "H-u") 'unindent-region-four)
 
-(global-set-key (kbd "s->") 'indent-region-four)
-(global-set-key (kbd "s-<") 'unindent-region-four)
+;; (global-set-key (kbd "s->") 'indent-region-four)
+;; (global-set-key (kbd "s-<") 'unindent-region-four)
 
-(global-set-key [(meta right)] 'python-indent-shift-right)
-(global-set-key [(meta left)] 'python-indent-shift-left)
+;; (global-set-key [(meta right)] 'python-indent-shift-right)
+;; (global-set-key [(meta left)] 'python-indent-shift-left)
 
-(global-set-key (kbd "<M-right>") 'python-indent-shift-right)
-(global-set-key (kbd "<M-left>") 'python-indent-shift-left)
+;; (global-set-key (kbd "<M-right>") 'python-indent-shift-right)
+;; (global-set-key (kbd "<M-left>") 'python-indent-shift-left)
+
+(global-set-key (kbd "<s-right>") 'python-indent-shift-right)
+(global-set-key (kbd "<s-left>") 'python-indent-shift-left)
 
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)

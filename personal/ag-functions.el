@@ -35,14 +35,7 @@
 (defun open-ag-function-at-point()
   "search for a function name in project"
   (interactive)
-  (ag-project (concat "function " (thing-at-point 'word) "("))
-  (open-ag-buffer)
-  )
-
-(defun open-ag-method-at-point()
-  "search for method usage in project"
-  (interactive)
-  (ag-project (concat "->" (thing-at-point 'word) "("))
+  (ag-project (concat "def " (thing-at-point 'word) "("))
   (open-ag-buffer)
   )
 
@@ -53,12 +46,12 @@
   (open-ag-buffer)
   )
 
-(defun open-ag-static-at-point()
-  "search for method usage in project"
-  (interactive)
-  (ag-project (concat "::" (thing-at-point 'word) "("))
-  (open-ag-buffer)
-  )
+;; (defun open-ag-static-at-point()
+;;   "search for method usage in project"
+;;   (interactive)
+;;   (ag-project (concat "::" (thing-at-point 'word) "("))
+;;   (open-ag-buffer)
+;;   )
 
 (defun open-ag-thing-at-point(thing)
   "find thing and open it"
@@ -162,7 +155,7 @@
 (defun open-ag-class(classname)
   "find class and open it"
   (interactive "sClass Name:")
-  (message "Finding %s!" (concat "class " classname " "))
+  (message "Finding %s!" (concat "class " classname ""))
   (if (ag-project (concat "class " classname " "))
       (message "Finding %s!" classname)
     )
