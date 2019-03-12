@@ -1,6 +1,4 @@
-;; (require 'drag-define)
-
-
+;;(require 'drag-define)
 
 ;; (stuff-key drag-stuff-mode-map (drag-stuff--kbd 'up) 'drag-stuff-up)
 ;; (define-key drag-stuff-mode-map (drag-stuff--kbd 'down) 'drag-stuff-down)
@@ -30,5 +28,5 @@
   (forward-line -1)
   (indent-according-to-mode))
 
-(global-set-key [(meta shift up)]  'move-line-up)
-(global-set-key [(meta shift down)]  'move-line-down)
+(global-set-key [(super up)]  'move-line-up)
+(global-set-key [(super down)]  'move-line-down)
