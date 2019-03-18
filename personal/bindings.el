@@ -1,12 +1,12 @@
-(defun contextual:find-file ()
-  (interactive)
-  (call-interactively (if (projectile-project-p)
-                          'projectile-find-file
-                        'helm-find-files)))
+;; (defun contextual:find-file ()
+;;   (interactive)
+;;   (call-interactively (if (projectile-project-p)
+;;                           'projectile-find-file
+;;                         'helm-find-files)))
 ;;(define-key global-map (kbd "C-x ") 'contextual:find-file)
 
-(define-key projectile-mode-map (kbd "C-x f") 'helm-find-files)
-(define-key global-map (kbd "C-x C-f") 'contextual:find-file)
+;;(define-key projectile-mode-map (kbd "C-x f") 'helm-find-files)
+;;(define-key global-map (kbd "C-x C-f") 'contextual:find-file)
 ;; (define-key projectile-mode-map (kbd "M-r a") 'ag-regexp-project-at-point)
 ;; (define-key projectile-mode-map (kbd "M-r r") 'ag-project-regexp)
 
@@ -36,6 +36,10 @@
 (global-set-key (kbd "C-c m") 'string-inflection-lower-camelcase)
 (global-set-key (kbd "C-c M") 'string-inflection-camelcase)
 (global-set-key (kbd "C-c -") 'string-inflection-underscore)
+
+;; CTL shift l, why didn't I do this sooner?
+(global-set-key (kbd "C-L") 'goto-line)
+;;(global-set-key (kbd "C-G") 'magit-status)
 
 ;;e
 ;;(global-set-key (kbd "M-s-´") 'er/expand-region)
@@ -78,7 +82,7 @@
 ;;                   (kmacro-end-and-call-macro 0)))
 
 ;; ;(setq mac-command-modifier 'meta)
-;; ;(setq mac-option-modifier 'super)
+(setq mac-escape-modifier 'super)
 
 ;; ;(key-chord-define-global "MM" 'switch-to-sql-buffer)
 
@@ -86,3 +90,5 @@
 ;; (local-unset-key (kbd "C-c d"))
 ;; (global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region)
 
+;; (global-unset-key (kbd "E-RET"))
+;; (global-set-key (kbd "E-RET") 'hippie-expand)

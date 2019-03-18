@@ -1,5 +1,22 @@
+(use-package magit
+  :demand
+  :commands magit-status
+  :config
+  (progn
+    (setq magit-last-seen-setup-instructions "1.4.0")
+    (setq magit-push-always-verify `PP)))
+
+
 ;;m
-(global-set-key (kbd "M-s-µ") 'magit-status)
+;;(global-set-key (kbd "M-s-µ") 'magit-status)
+
+;;m
+;;(global-set-key (kbd "M-s-m") 'magit-status)
+
+;;m
+;;(global-set-key (kbd "C-m") 'magit-status)
+;;(global-set-key (kbd "C-M-n") 'magit-status)
+;;(define-key input-decode-map [?\C-\M-m] [C-M-m])
 
 (require 'ffap)
 
@@ -40,9 +57,8 @@
           ((or (not ffap-newfile-prompt)
                (file-exists-p filename)
                (y-or-n-p "File does not exist, create buffer? "))
-           (funcall ffap-file-finder
-                    ;; expand-file-name fixes "~/~/.emacs" bug sent by CHUCKR.
-                    (expand-file-name filename)))
+           ;; expand-file-name fixes "~/~/.emacs" bug sent by CHUCKR.
+           (expand-file-name filename))
           ;; User does not want to find a non-existent file:
           ((signal 'file-error (list "Opening file buffer"
                                      "no such file or directory"

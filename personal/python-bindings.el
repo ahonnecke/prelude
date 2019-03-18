@@ -36,11 +36,19 @@
 ;; (global-set-key (kbd "<M-right>") 'python-indent-shift-right)
 ;; (global-set-key (kbd "<M-left>") 'python-indent-shift-left)
 
-(global-set-key (kbd "<s-right>") 'python-indent-shift-right)
-(global-set-key (kbd "<s-left>") 'python-indent-shift-left)
+;;(global-set-key (kbd "<s-right>") 'python-indent-shift-right)
+;;(global-set-key (kbd "<s-left>") 'python-indent-shift-left)
 
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
+
+(global-set-key (kbd "C-c C-r") 'python-indent-shift-right)
+(global-set-key (kbd "C-c C-l") 'python-indent-shift-left)
+
+(global-set-key (kbd "C->") 'python-indent-shift-right)
+(global-set-key (kbd "C-<") 'python-indent-shift-left)
+
+
 
 ;;i
 ;; (global-set-key (kbd "M-s-^") 'python-indent-shift-right)
@@ -51,6 +59,9 @@
 (global-set-key (kbd "M-s->") 'python-indent-shift-right)
 (global-set-key (kbd "M-s-<") 'python-indent-shift-left)
 
+(global-set-key (kbd "M-C->") 'python-indent-shift-right)
+(global-set-key (kbd "M-C-<") 'python-indent-shift-left)
+
 ;; >
 (global-set-key (kbd "M-s-≥") 'python-indent-shift-right)
 ;; <
@@ -58,3 +69,5 @@
 
 ;;f
 (global-set-key (kbd "M-s-ƒ") 'py-autopep8-buffer)
+
+
