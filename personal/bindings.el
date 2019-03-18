@@ -3,7 +3,7 @@
 ;;   (call-interactively (if (projectile-project-p)
 ;;                           'projectile-find-file
 ;;                         'helm-find-files)))
-;;(define-key global-map (kbd "C-x ") 'contextual:find-file)
+(define-key global-map (kbd "C-x f") 'helm-find-files)
 
 ;;(define-key projectile-mode-map (kbd "C-x f") 'helm-find-files)
 ;;(define-key global-map (kbd "C-x C-f") 'contextual:find-file)

@@ -6,6 +6,10 @@
     (setq magit-last-seen-setup-instructions "1.4.0")
     (setq magit-push-always-verify `PP)))
 
+(use-package forge
+  :after magit)
+
+(setq gnutls-log-level 1)
 
 ;;m
 ;;(global-set-key (kbd "M-s-µ") 'magit-status)
