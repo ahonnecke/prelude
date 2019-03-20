@@ -7,6 +7,6 @@
              whitespace-newline-mode)
   :config
   (progn
-    (setq whitespace-style '(trailing tabs tab-mark face lines space-before-tab indentation space-after-tab) whitespace-line-column 100)
+    (setq whitespace-style '(trailing tabs tab-mark face lines space-before-tab indentation space-after-tab) whitespace-line-column 119)
     (global-whitespace-mode)))
 

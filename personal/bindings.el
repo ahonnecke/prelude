@@ -92,3 +92,5 @@
 
 ;; (global-unset-key (kbd "E-RET"))
 ;; (global-set-key (kbd "E-RET") 'hippie-expand)
+
+(define-key prelude-mode-map (kbd "M-o") (quote ace-window))

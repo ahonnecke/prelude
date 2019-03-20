@@ -18,6 +18,8 @@
   (define-key python-mode-map (kbd "M-l") 'goto-line)
   )
 
+(setq python-shell-interpreter "python3")
+
 (global-set-key (kbd "M-l") 'goto-line)
 (global-set-key (kbd "C-l") 'recenter-top-bottom)
 

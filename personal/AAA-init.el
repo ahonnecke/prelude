@@ -54,7 +54,7 @@
 ;; Buffer Local Variables
 ;; ---------------------------------
 (setq-default
- fill-column 70
+ fill-column 100
  indent-tabs-mode nil
  truncate-lines t
  require-final-newline t
