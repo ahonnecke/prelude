@@ -1,5 +1,5 @@
 ;;m
-(global-set-key (kbd "M-s-µ") 'magit-status)
+;;(global-set-key (kbd "M-s-µ") 'magit-status)
 
 (require 'ffap)
 
@@ -48,4 +48,4 @@
                                      "no such file or directory"
                                      filename))))))
 ;;o
-(global-set-key (kbd "M-s-ø") 'find-file-at-point-with-line)
+;;(global-set-key (kbd "M-s-ø") 'find-file-at-point-with-line)

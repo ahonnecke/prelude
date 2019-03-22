@@ -1,4 +1,4 @@
-                                        ;(fset 'switch-to-ag-buffer 'switch-to-ag-buffer-2)
+;(fset 'switch-to-ag-buffer 'switch-to-ag-buffer-2)
 
 (define-key projectile-mode-map (kbd "C-M-u") 'open-ag-function-at-point)
 (define-key projectile-mode-map (kbd "C-M-r") 'open-ag-regexp-at-point)
