@@ -94,3 +94,14 @@
 ;; (global-set-key (kbd "E-RET") 'hippie-expand)
 
 (define-key prelude-mode-map (kbd "M-o") (quote ace-window))
+
+(define-key prelude-mode-map (kbd "H-r") 'crux-recentf-find-file)
+(global-set-key (kbd "H-r") 'crux-recentf-find-file)
+(define-key prelude-mode-map (kbd "H-j") 'crux-top-join-line)
+(define-key prelude-mode-map (kbd "H-k") 'crux-kill-whole-line)
+(define-key prelude-mode-map (kbd "H-m m") 'magit-status)
+(define-key prelude-mode-map (kbd "H-m l") 'magit-log)
+(define-key prelude-mode-map (kbd "H-m f") 'magit-log-buffer-file)
+(define-key prelude-mode-map (kbd "H-m b") 'magit-blame)
+(define-key prelude-mode-map (kbd "H-o") 'crux-smart-open-line-above)
+

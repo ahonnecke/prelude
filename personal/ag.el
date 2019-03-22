@@ -13,14 +13,14 @@
 
 ;;(define-key projectile-mode-map (kbd "H-a") 'projectile-ag)
 ;;(define-key projectile-mode-map (kbd "M-a") 'ag)
-(define-key projectile-mode-map (kbd "M-a") 'ag-project-at-point)
-(define-key projectile-mode-map (kbd "H-j") 'ag-region)
-(define-key projectile-mode-map (kbd "H-r") 'ag-project-regexp)
+;;(define-key projectile-mode-map (kbd "M-a") 'ag-project-at-point)
+;;(define-key projectile-mode-map (kbd "H-j") 'ag-region)
+;;(define-key projectile-mode-map (kbd "H-r") 'ag-project-regexp)
 ;; (define-key projectile-mode-map (kbd "S-p a") 'ag-project-regexp)
 ;; (define-key projectile-mode-map (kbd "C-c p a") 'ag-project-regexp)
 ;; (define-key projectile-mode-map (kbd "C-M k") 'ag-project-regexp)
-(define-key projectile-mode-map (kbd "M-s-∆") 'open-ag-thing-at-point)
-(define-key projectile-mode-map (kbd "M-s-®") 'ag-regexp-project-at-point)
+;;(define-key projectile-mode-map (kbd "M-s-∆") 'open-ag-thing-at-point)
+;;(define-key projectile-mode-map (kbd "M-s-®") 'ag-regexp-project-at-point)
 
 
 ; (key-chord-define-global "FF" 'ag-function-search)
