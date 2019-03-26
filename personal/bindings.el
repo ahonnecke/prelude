@@ -105,3 +105,9 @@
 (define-key prelude-mode-map (kbd "H-m b") 'magit-blame)
 (define-key prelude-mode-map (kbd "H-o") 'crux-smart-open-line-above)
 
+(define-key prelude-mode-map (kbd "H-f") 'helm-projectile-find-file)
+
+(global-set-key (kbd "H-d") 'backward-kill-word)
+
+(global-set-key (kbd "M-l") 'goto-line)
+(global-set-key (kbd "C-l") 'recenter-top-bottom)

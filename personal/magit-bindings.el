@@ -1,5 +1,5 @@
 ;;m
-;;(global-set-key (kbd "M-s-µ") 'magit-status)
+(global-set-key (kbd "H-g") 'magit-status)
 
 (require 'ffap)
 
@@ -49,3 +49,32 @@
                                      filename))))))
 ;;o
 ;;(global-set-key (kbd "M-s-ø") 'find-file-at-point-with-line)
+
+;;makes magit open stuff in the same buffer, perfect
+;; except for the commit action, that opens the process instead of commit
+;; bffer
+(setq magit-display-buffer-function
+      (lambda (buffer)
+        (display-buffer
+         buffer (if (and (derived-mode-p 'magit-mode)
+                         (memq (with-current-buffer buffer major-mode)
+                               '(magit-process-mode
+                                 magit-revision-mode
+                                 magit-diff-mode
+                                 magit-stash-mode
+                                 magit-status-mode)))
+                    nil
+                  '(display-buffer-same-window)))))
+
+;; this didn't work
+;; (setq magit-display-buffer-function
+;;       (lambda (buffer)
+;;         (display-buffer
+;;          buffer (if (and (derived-mode-p 'magit-mode)
+;;                          (memq (with-current-buffer buffer major-mode)
+;;                                '(magit-revision-mode
+;;                                  magit-stash-mode
+;;                                  magit-status-mode)))
+;;                     nil
+;;                   '(display-buffer-same-window)))))
+

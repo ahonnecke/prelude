@@ -20,9 +20,6 @@
 
 (setq python-shell-interpreter "python3")
 
-(global-set-key (kbd "M-l") 'goto-line)
-(global-set-key (kbd "C-l") 'recenter-top-bottom)
-
 (add-hook 'python-mode-hook
           (lambda () (modify-syntax-entry ?_ "w" python-mode-syntax-table)))
 
