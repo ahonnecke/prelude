@@ -1,6 +1,8 @@
-;;m
+;;Bindings
 (global-set-key (kbd "H-g") 'magit-status)
+(global-set-key (kbd "H-h") 'browse-at-remote)
 
+;; I'm convinced that this is "furious fap"
 (require 'ffap)
 
 (defun find-file-at-point-with-line (&optional filename)
@@ -77,4 +79,6 @@
 ;;                                  magit-status-mode)))
 ;;                     nil
 ;;                   '(display-buffer-same-window)))))
+
+
 

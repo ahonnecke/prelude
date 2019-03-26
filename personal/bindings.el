@@ -94,6 +94,9 @@
 ;; (global-set-key (kbd "E-RET") 'hippie-expand)
 
 (define-key prelude-mode-map (kbd "M-o") (quote ace-window))
+(define-key shell-mode-map (kbd "M-o") (quote ace-window))
+(define-key shell-mode-map (kbd "C-x o") (quote ace-window))
+(global-set-key (kbd "C-x o") (quote ace-window))
 
 (define-key prelude-mode-map (kbd "H-r") 'crux-recentf-find-file)
 (global-set-key (kbd "H-r") 'crux-recentf-find-file)
