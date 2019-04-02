@@ -8,7 +8,6 @@
 
   :config
   (setq python-indent-offset 4)
-  (add-hook 'python-mode-hook 'smartparens-mode)
   (add-hook 'python-mode-hook 'color-identifiers-mode)
 
   (global-set-key (kbd "C-c C-r") 'python-indent-shift-right)

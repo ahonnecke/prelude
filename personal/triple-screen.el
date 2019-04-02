@@ -6,3 +6,5 @@
          (quote ([?\C-x ?1 ?\C-x ?3 ?\C-x ?3 ?\C-x ?+ ] 0 "%d")) arg)))
 
 (triple-screen)
+
+(global-set-key (kbd "C-c +") 'triple-screen)

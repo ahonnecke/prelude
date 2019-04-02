@@ -24,9 +24,6 @@
 (global-set-key (kbd "H-i") 'indent-region-four)
 (global-set-key (kbd "H-u") 'unindent-region-four)
 
-(global-set-key (kbd "H-i") 'indent-region-four)
-(global-set-key (kbd "H-u") 'unindent-region-nfour)
-
 (global-set-key (kbd "s->") 'indent-region-four)
 (global-set-key (kbd "s-<") 'unindent-region-four)
 
@@ -62,3 +59,6 @@
 (global-set-key (kbd "M-s-ƒ") 'py-autopep8-buffer)
 
 (global-set-key (kbd "M-f") 'forward-word)
+
+(key-chord-define-global ";r" 'indent-region-four)
+(key-chord-define-global ";l" 'unindent-region-four)

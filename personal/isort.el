@@ -10,8 +10,6 @@
            (shell-quote-argument (buffer-file-name))))
   (revert-buffer t t t))
 
-(global-set-key (kbd "M-s-^") 'isort-imports)
-
 (require 'py-isort)
 (add-hook 'before-save-hook 'py-isort-before-save)
 

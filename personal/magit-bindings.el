@@ -1,3 +1,5 @@
+;;(setq gnutls-log-level 1)
+
 ;;Bindings
 (global-set-key (kbd "H-g") 'magit-status)
 (global-set-key (kbd "H-h") 'browse-at-remote)
@@ -79,6 +81,3 @@
 ;;                                  magit-status-mode)))
 ;;                     nil
 ;;                   '(display-buffer-same-window)))))
-
-
-

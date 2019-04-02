@@ -10,3 +10,5 @@
   (add-to-list 'company-backends 'company-jedi))
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)
+
+;; http://tkf.github.io/emacs-jedi/latest/#keybinds

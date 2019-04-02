@@ -2,7 +2,6 @@
 
 (require 'string-inflection)
 
-;;c
-(global-set-key (kbd "M-s-ç") 'string-inflection-all-cycle)
-;;C
-(global-set-key (kbd "M-s-c") 'string-inflection-camelcase)
+(global-set-key (kbd "C-c m") 'string-inflection-lower-camelcase)
+(global-set-key (kbd "C-c M") 'string-inflection-camelcase)
+(global-set-key (kbd "C-c -") 'string-inflection-underscore)

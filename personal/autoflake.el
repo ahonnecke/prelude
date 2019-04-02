@@ -1,3 +1,5 @@
+(setenv "PYTHONIOENCODING" "utf8")
+
 ;; (add-hook 'python-mode-hook
 ;;  (lambda ()(add-hook 'before-save-hook 'elpy-autoflake8-fix-code nil 'local)))
 
