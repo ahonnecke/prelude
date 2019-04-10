@@ -93,7 +93,7 @@
 
 (define-key prelude-mode-map (kbd "H-f") 'helm-projectile-find-file)
 
-(global-set-key (kbd "H-d") 'backward-kill-word)
+(global-set-key (kbd "C-w") 'kill-region)
 
 (global-set-key (kbd "M-l") 'goto-line)
 (global-set-key (kbd "C-l") 'recenter-top-bottom)

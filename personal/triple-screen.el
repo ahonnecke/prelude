@@ -5,6 +5,13 @@
         (kmacro-exec-ring-item
          (quote ([?\C-x ?1 ?\C-x ?3 ?\C-x ?3 ?\C-x ?+ ] 0 "%d")) arg)))
 
-(triple-screen)
+(fset 'quad-screen
+      (lambda (&optional arg)
+        "Split the screen into four bufers"
+        (interactive "p")
+        (kmacro-exec-ring-item
+         (quote ([?\C-x ?1 ?\C-x ?3 ?\C-x ?3 ?\C-x ?3 ?\C-x ?+ ] 0 "%d")) arg)))
 
-(global-set-key (kbd "C-c +") 'triple-screen)
+(quad-screen)
+
+(global-set-key (kbd "C-c +") 'quad-screen)
