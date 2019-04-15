@@ -62,3 +62,7 @@
 
 (key-chord-define-global ";r" 'indent-region-four)
 (key-chord-define-global ";l" 'unindent-region-four)
+
+(global-set-key (kbd "C-H-." 'python-indent-shift-right))
+(global-set-key (kbd "C-H-,") 'python-indent-shift-left)
+

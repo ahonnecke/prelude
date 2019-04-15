@@ -10,6 +10,8 @@
 (define-key projectile-mode-map (kbd "C-M-v") 'open-ag-thing-at-point-vendor)
 (define-key projectile-mode-map (kbd "C-M-j") 'ag-region)
 
+;;(define-key projectile-mode-map (kbd "C-H-f") 'helm-projectile-ag)
+(define-key projectile-mode-map (kbd "C-H-a") 'helm-projectile-ag)
 
 ;;(define-key projectile-mode-map (kbd "H-a") 'ag-project)
 ;;(define-key projectile-mode-map (kbd "M-a") 'ag)
@@ -39,3 +41,4 @@
 
 ;; (setq ag-reuse-window 't)
 (setq ag-highlight-search t)
+
