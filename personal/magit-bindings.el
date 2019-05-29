@@ -5,6 +5,7 @@
 (global-set-key (kbd "H-h") 'browse-at-remote)
 
 (remove-hook 'server-switch-hook 'magit-commit-diff)
+(setq vc-handled-backends (delq 'Git vc-handled-backends))
 
 ;; I'm convinced that this is "furious fap"
 (require 'ffap)
