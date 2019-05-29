@@ -6,6 +6,7 @@
 
 (remove-hook 'server-switch-hook 'magit-commit-diff)
 (setq vc-handled-backends (delq 'Git vc-handled-backends))
+(setq magit-refresh-status-buffer nil)
 
 ;; I'm convinced that this is "furious fap"
 (require 'ffap)
