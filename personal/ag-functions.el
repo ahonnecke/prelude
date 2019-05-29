@@ -13,8 +13,8 @@
 
 ;; these control the way ag uses buffers and the following functions rely on
 ;; these options being true
-(setq ag-reuse-buffers 't)
-(setq ag-reuse-window 't)
+(setq ag-reuse-buffers nil)
+(setq ag-reuse-window nil)
 
 (fset 'open-ag-file-at-point
       [?\C-  ?\C-s ?. ?p ?h ?p ?\M-w ?\C-x ?f ?\C-y return])

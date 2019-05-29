@@ -4,6 +4,8 @@
 (global-set-key (kbd "H-g") 'magit-status)
 (global-set-key (kbd "H-h") 'browse-at-remote)
 
+(remove-hook 'server-switch-hook 'magit-commit-diff)
+
 ;; I'm convinced that this is "furious fap"
 (require 'ffap)
 
@@ -57,18 +59,18 @@
 ;;makes magit open stuff in the same buffer, perfect
 ;; except for the commit action, that opens the process instead of commit
 ;; bffer
-(setq magit-display-buffer-function
-      (lambda (buffer)
-        (display-buffer
-         buffer (if (and (derived-mode-p 'magit-mode)
-                         (memq (with-current-buffer buffer major-mode)
-                               '(magit-process-mode
-                                 magit-revision-mode
-                                 magit-diff-mode
-                                 magit-stash-mode
-                                 magit-status-mode)))
-                    nil
-                  '(display-buffer-same-window)))))
+;; (setq magit-display-buffer-function
+;;       (lambda (buffer)
+;;         (display-buffer
+;;          buffer (if (and (derived-mode-p 'magit-mode)
+;;                          (memq (with-current-buffer buffer major-mode)
+;;                                '(magit-process-mode
+;;                                  magit-revision-mode
+;;                                  magit-diff-mode
+;;                                  magit-stash-mode
+;;                                  )))
+;;                     nil
+;;                   '(display-buffer-same-window)))))
 
 ;; this didn't work
 ;; (setq magit-display-buffer-function

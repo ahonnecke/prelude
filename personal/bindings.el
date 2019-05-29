@@ -102,3 +102,6 @@
 
 (global-set-key (kbd "C-;") 'er/expand-region)
 (define-key flyspell-mode-map (kbd "C-;") 'er/expand-region)
+
+(global-set-key (kbd "C-<next>") 'windmove-right)
+(global-set-key (kbd "C-<prior>") 'windmove-left)
