@@ -20,6 +20,15 @@
     ((error line-start (file-name) ":" line ": error:" (message) line-end))
     :modes python-mode)
 
+;; (flycheck-define-checker
+;;     python-black ""
+;;     :command ("black"
+;;               "--check"
+;;               source-original)
+;;     :error-patterns
+;;     ((error line-start (file-name) ":" line ": error:" (message) line-end))
+;;     :modes python-mode)
+
 (add-to-list 'flycheck-checkers 'python-mypy t)
 (flycheck-add-next-checker 'python-pylint 'python-mypy t)
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
