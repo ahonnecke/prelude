@@ -6,13 +6,10 @@
            (shell-quote-argument (buffer-file-name))))
   (revert-buffer t t t))
 
-;; (add-hook 'before-save-hook 'blacken-buffer)
 (add-hook 'python-mode-hook 'blacken-mode)
 
-;; TODO make this work
-(defun my-set-tab-mode ()
-  (when (and (stringp buffer-file-name)
-             (string-match "\\.py\\'" buffer-file-name))
-    (add-hook 'before-save-hook 'blacken-buffer)))
+(defun my-python-mode-before-save-hook ()
+  (when (eq major-mode 'python-mode)
+    (message "Any color you like") (blacken-buffer)))
 
-(add-hook 'python-mode-hook 'my-set-tab-mode)
+(add-hook 'before-save-hook #'my-python-mode-before-save-hook)
