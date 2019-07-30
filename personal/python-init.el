@@ -17,7 +17,11 @@
   (define-key python-mode-map (kbd "M-l") 'goto-line)
   (define-key python-mode-map (kbd "M-.") 'jedi:goto-definition)
   (define-key python-mode-map (kbd "M-,") 'jedi:goto-definition-pop-marker)
+
   )
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:setup-keys t)                      ; optional
 
 (setq python-shell-interpreter "python3")
 
@@ -33,6 +37,11 @@
 
 (add-hook 'python-mode-hook
           (lambda ()
+            (setq auto-complete-mode t)
             (setq indent-tabs-mode nil)
             (setq tab-width 4)
             (setq python-indent-offset 4)))
+
+(define-key python-mode-map [C-tab] 'jedi:complete)
+(define-key python-mode-map (kbd "H-i") 'python--send-line)
+
