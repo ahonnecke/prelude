@@ -37,7 +37,7 @@
 
 (add-hook 'python-mode-hook
           (lambda ()
-            (setq auto-complete-mode t)
+            (setq auto-complete-mode nil)
             (setq indent-tabs-mode nil)
             (setq tab-width 4)
             (setq python-indent-offset 4)))

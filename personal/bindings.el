@@ -91,7 +91,7 @@
 (define-key prelude-mode-map (kbd "H-m b") 'magit-blame)
 (define-key prelude-mode-map (kbd "H-o") 'crux-smart-open-line-above)
 
-(define-key prelude-mode-map (kbd "H-f") 'helm-projectile-find-file)
+(define-key prelude-mode-map (kbd "H-f") 'fzf-git)
 
 (global-set-key (kbd "C-w") 'kill-region)
 
