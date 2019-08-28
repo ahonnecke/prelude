@@ -68,9 +68,12 @@
     (setq helm-projectile-sources-list
           '(helm-source-projectile-buffers-list))))
 
-(use-package helm-git-grep
-  ;; Interactive git-grep using helm
-  :bind (("s-F" . helm-git-grep)))
+;; (use-package helm-git-grep
+;;   ;; Interactive git-grep using helm
+;;   :bind (("s-F" . helm-git-grep)))
+
+(use-package fzf
+  :bind (("h-F" . fzf-directory)))
 
 (use-package helm-ag
   ;; Interactive ag queries using helm.
