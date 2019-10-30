@@ -65,3 +65,12 @@
 
 (global-set-key (kbd "C-H-.") 'python-indent-shift-right)
 (global-set-key (kbd "C-H-,") 'python-indent-shift-left)
+
+(global-unset-key (kbd "C-c d"))
+(local-unset-key (kbd "C-c d"))
+;; (local-unset-key (kbd) "C-c d")
+(global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region)
+
+(eval-after-load 'jedi-mode
+  '(progn
+     (define-key jedi-mode-map (kbd "C-c d") 'crux-duplicate-current-line-or-region)))

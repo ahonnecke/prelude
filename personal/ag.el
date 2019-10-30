@@ -15,7 +15,7 @@
 
 ;;(define-key projectile-mode-map (kbd "H-a") 'ag-project)
 ;;(define-key projectile-mode-map (kbd "M-a") 'ag)
-(define-key projectile-mode-map (kbd "H-a") 'ag-project-at-point)
+(define-key projectile-mode-map (kbd "H-n") 'ag-project-at-point)
 ;;(define-key projectile-mode-map (kbd "H-j") 'ag-region)
 ;;(define-key projectile-mode-map (kbd "H-r") 'ag-project-regexp)
 ;; (define-key projectile-mode-map (kbd "S-p a") 'ag-project-regexp)

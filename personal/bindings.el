@@ -69,9 +69,9 @@
 (global-set-key (kbd "H-.") 'end-of-buffer)
 (global-set-key (kbd "H-,") 'beginning-of-buffer)
 
-;; (global-unset-key (kbd "C-c d"))
+(global-unset-key (kbd "C-c d"))
 ;; (local-unset-key (kbd) "C-c d"
-;; (global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region))
+(global-set-key (kbd "C-c d") 'crux-duplicate-current-line-or-region)
 
 (define-key prelude-mode-map (kbd "M-o") (quote ace-window))
 (define-key shell-mode-map (kbd "M-o") (quote ace-window))

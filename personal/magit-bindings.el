@@ -1,7 +1,7 @@
 ;;(setq gnutls-log-level 1)
 
 ;;Bindings
-(global-set-key (kbd "H-g") 'magit-status)
+;; (global-set-key (kbd "H-m") 'magit-status)
 (global-set-key (kbd "H-h") 'browse-at-remote)
 
 (remove-hook 'server-switch-hook 'magit-commit-diff)
