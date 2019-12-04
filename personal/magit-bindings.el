@@ -52,11 +52,21 @@
                     ;; expand-file-name fixes "~/~/.emacs" bug sent by CHUCKR.
                     (expand-file-name filename)))
           ;; User does not want to find a non-existent file:
-          ((signal 'file-error (list "Opening file buffer"
+          ((signal 'file-error (list "Opening filee buffer"
                                      "no such file or directory"
                                      filename))))))
+
+(defun auto-display-magit-process-buffer (&rest args)
+  "Automatically display the process buffer when it is updated."
+  (let ((magit-display-buffer-noselect t))
+    (magit-process-buffer)))
+
+(advice-add 'magit-process-insert-section :before #'auto-display-magit-process-buffer)
+
+(define-key magit-process-mode-map  (kbd "<return>") 'find-file-at-point)
+
 ;;o
-;;(global-set-key (kbd "M-s-ø") 'find-file-at-point-with-line)
+;;(global-set-key (kbd "H-o") 'find-file-at-point)
 
 ;;makes magit open stuff in the same buffer, perfect
 ;; except for the commit action, that opens the process instead of commit
