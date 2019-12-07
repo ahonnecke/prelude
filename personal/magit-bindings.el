@@ -108,6 +108,10 @@
 
 (advice-add 'magit-process-insert-section :before #'auto-display-magit-process-buffer)
 
+(use-package magit
+  :config
+  (define-key magit-process-mode-map  (kbd "<return>") 'find-line-hook-failure-at-point))
+
 
 
 ;;o
