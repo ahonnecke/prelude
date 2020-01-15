@@ -54,6 +54,10 @@
 (global-set-key (kbd "s-f") 'forward-sexp)
 (global-set-key (kbd "s-b") 'backward-sexp)
 
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x C-k") 'kill-buffer)
+(global-set-key (kbd "s-b") 'backward-sexp)
+
 (global-set-key (kbd "H-y") 'ace-window)
 (global-set-key (kbd "H-u") 'ace-swap-window)
 (key-chord-define-global ";a" 'ace-window)
