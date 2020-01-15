@@ -45,7 +45,7 @@
 (global-set-key (kbd "C-s") 'isearch-forward)
 
 
-(global-set-key (kbd "s-a") 'avy-goto-char)
+(key-chord-define-global ";j" 'avy-goto-char)
 
 ;;p
 ;;(global-set-key (kbd "M-s-π") 'pre-commit)
