@@ -2,3 +2,4 @@
 (use-package auto-highlight-symbol)
 (use-package browse-at-remote)
 (use-package fzf)
+(use-package elpy)

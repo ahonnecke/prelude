@@ -1,4 +1,5 @@
-(require 'flycheck-mypy)
+(use-package flycheck-mypy)
+
 (add-hook 'python-mode-hook 'flycheck-mode)
 
 ;;If you want to use mypy you probably don't want pylint or

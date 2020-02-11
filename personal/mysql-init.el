@@ -3,7 +3,7 @@
             (toggle-truncate-lines t)))
 
 ;;TODO get this to read from .my.cnf
-(load "~/.mysql-login.el")
+;; (load "~/.mysql-login.el")
 
 ;; Of the format
 ;; (setq sql-connection-alist
@@ -20,39 +20,39 @@
 ;;                  (sql-password "password")
 ;;                  (sql-database "db2"))))
 
-(defun my-local-db ()
-  (interactive)
-  (my-sql-connect 'mysql 'local))
+;; (defun my-local-db ()
+;;   (interactive)
+;;   (my-sql-connect 'mysql 'local))
 
-(defun my-dev-db ()
-  (interactive)
-  (my-sql-connect 'mysql 'dev))
+;; (defun my-dev-db ()
+;;   (interactive)
+;;   (my-sql-connect 'mysql 'dev))
 
-(setq sql-product 'mysql)
+;; (setq sql-product 'mysql)
 
-(defun my-sql-connect (product connection)
-  ;; remember to set the sql-product, otherwise, it will fail for the first time
-  ;; you call the function
-  (setq sql-product product)
-  (sql-rename-buffer)
-  (sql-connect connection))
+;; (defun my-sql-connect (product connection)
+;;   ;; remember to set the sql-product, otherwise, it will fail for the first time
+;;   ;; you call the function
+;;   (setq sql-product product)
+;;   (sql-rename-buffer)
+;;   (sql-connect connection))
 
-(defun my-local-db ()
-  (interactive)
-  (my-sql-connect 'mysql 'local))
+;; (defun my-local-db ()
+;;   (interactive)
+;;   (my-sql-connect 'mysql 'local))
 
-(defun my-dev-db ()
-  (interactive)
-  (my-sql-connect 'mysql 'dev))
+;; (defun my-dev-db ()
+;;   (interactive)
+;;   (my-sql-connect 'mysql 'dev))
 
-(setq sql-product 'mysql)
+;; (setq sql-product 'mysql)
 
-(defun my-sql-connect (product connection)
-  ;; remember to set the sql-product, otherwise, it will fail for the first time
-  ;; you call the function
-  (setq sql-product product)
-  (sql-rename-buffer)
-  (sql-connect connection))
+;; (defun my-sql-connect (product connection)
+;;   ;; remember to set the sql-product, otherwise, it will fail for the first time
+;;   ;; you call the function
+;;   (setq sql-product product)
+;;   (sql-rename-buffer)
+;;   (sql-connect connection))
 
-(add-hook 'sql-interactive-mode-hook
-          (lambda () (sql-rename-buffer)))
+;; (add-hook 'sql-interactive-mode-hook
+;;           (lambda () (sql-rename-buffer)))

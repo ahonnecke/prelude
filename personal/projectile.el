@@ -8,7 +8,7 @@
 (define-key projectile-mode-map (kbd "H-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-(define-key projectile-mode-map (kbd "H-p p") 'projectile-switch-open-project)
+(define-key projectile-mode-map (kbd "H-p p") 'projectile-switch-project)
 
 (setq projectile-switch-project-action #'projectile-dired)
 
