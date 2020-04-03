@@ -14,8 +14,8 @@
 (flycheck-define-checker
     python-mypy ""
     :command ("mypy"
-              "--ignore-missing-imports" "--fast-parser"
-              "--python-version" "3.6"
+              "--ignore-missing-imports"
+              "--python-version" "3.7"
               source-original)
     :error-patterns
     ((error line-start (file-name) ":" line ": error:" (message) line-end))
