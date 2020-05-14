@@ -14,7 +14,6 @@
   (global-set-key (kbd "C-c C-l") 'python-indent-shift-left)
   (define-key python-mode-map (kbd "C-c C-r") 'python-indent-shift-right)
   (define-key python-mode-map (kbd "C-c C-l") 'python-indent-shift-left)
-  (define-key python-mode-map (kbd "M-l") 'goto-line)
   (define-key python-mode-map (kbd "M-.") 'jedi:goto-definition)
   (define-key python-mode-map (kbd "M-,") 'jedi:goto-definition-pop-marker)
 

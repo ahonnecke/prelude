@@ -30,14 +30,14 @@
 ;; (global-set-key [(meta right)] 'python-indent-shift-right)
 ;; (global-set-key [(meta left)] 'python-indent-shift-left)
 
-;; (global-set-key (kbd "<M-right>") 'python-indent-shift-right)
-;; (global-set-key (kbd "<M-left>") 'python-indent-shift-left)
+(global-set-key (kbd "<M-right>") 'python-indent-shift-right)
+(global-set-key (kbd "<M-left>") 'python-indent-shift-left)
 
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 
-;; (global-set-key (kbd "<M-right>") 'python-indent-shift-right)
-;; (global-set-key (kbd "<M-left>") 'python-indent-shift-left)
+(global-set-key (kbd "<M-right>") 'python-indent-shift-right)
+(global-set-key (kbd "<M-left>") 'python-indent-shift-left)
 
 ;; ;;i
 ;; ;; (global-set-key (kbd "M-s-^") 'python-indent-shift-right)
@@ -74,3 +74,5 @@
 (eval-after-load 'jedi-mode
   '(progn
      (define-key jedi-mode-map (kbd "C-c d") 'crux-duplicate-current-line-or-region)))
+
+(global-set-key (kbd "C-H-i") 'completion-at-point)

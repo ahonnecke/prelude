@@ -24,37 +24,41 @@
            (and (looking-at "[^:]*:\[0-9\]+:\\(\[0-9\]+\\)")
                 (string-to-number (match-string-no-properties 1)))
            (let 'column-number 0))))
-    (message "%s --> %s:%s" filename line-number column-number)
-    (cond ((ffap-url-p filename)
+
+    (let ((real (car (s-split "\\:" filename))))
+          (message "%s --> %s:%s" real line-number column-number)
+    (cond ((ffap-url-p real)
            (let (current-prefix-arg)
-             (funcall ffap-url-fetcher filename)))
+             (funcall ffap-url-fetcher real)))
           ((and line-number
-                (file-exists-p filename))
-           (progn (find-file-other-window filename)
+                (file-exists-p real))
+           (progn (find-file-other-window real)
                   ;; goto-line is for interactive use
                   (goto-char (point-min))
                   (forward-line (1- line-number))
                   (forward-char column-number)))
           ((and ffap-pass-wildcards-to-dired
                 ffap-dired-wildcards
-                (string-match ffap-dired-wildcards filename))
-           (funcall ffap-directory-finder filename))
+                (string-match ffap-dired-wildcards real))
+           (funcall ffap-directory-finder real))
           ((and ffap-dired-wildcards
-                (string-match ffap-dired-wildcards filename)
+                (string-match ffap-dired-wildcards real)
                 find-file-wildcards
                 ;; Check if it's find-file that supports wildcards arg
                 (memq ffap-file-finder '(find-file find-alternate-file)))
-           (funcall ffap-file-finder (expand-file-name filename) t))
+           (funcall ffap-file-finder (expand-file-name real) t))
           ((or (not ffap-newfile-prompt)
-               (file-exists-p filename)
+               (file-exists-p real)
                (y-or-n-p "File does not exist, create buffer? "))
            (funcall ffap-file-finder
                     ;; expand-file-name fixes "~/~/.emacs" bug sent by CHUCKR.
-                    (expand-file-name filename)))
+                    (expand-file-name real)))
           ;; User does not want to find a non-existent file:
           ((signal 'file-error (list "Opening file buffer"
                                      "no such file or directory"
-                                     filename))))))
+                                     real))))
+      )
+))
 
 (defun find-line-hook-failure-at-point (&optional filename)
   "Opens file at point and moves point to line specified next to file name."
@@ -110,7 +114,7 @@
 
 (use-package magit
   :config
-  (define-key magit-process-mode-map  (kbd "<return>") 'find-line-hook-failure-at-point))
+  (define-key magit-process-mode-map  (kbd "<return>") 'find-file-at-point-with-line))
 
 
 

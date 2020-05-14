@@ -30,7 +30,7 @@
 (global-set-key (kbd "M-<return>") 'hippie-expand)
 
 ;; Go to line number
-(global-set-key (kbd "C-L") 'goto-line)
+;;(global-set-key (kbd "C-L") 'goto-line)
 
 ;; Go to visible line with home row keys
 (global-set-key (kbd "H-l") 'avy-goto-line)
@@ -40,7 +40,8 @@
 (global-set-key (kbd "C-c q") 'query-replace)
 
 (global-set-key (kbd "H-s") 'swiper)
-(global-set-key (kbd "H-c") 'string-inflection-all-cycle)
+(global-set-key (kbd "M-u") 'string-inflection-python-style-cycle)
+(global-set-key (kbd "H-M-u") 'string-inflection-all-cycle)
 
 (global-set-key (kbd "C-s") 'isearch-forward)
 
@@ -99,10 +100,11 @@
 
 (define-key prelude-mode-map (kbd "H-C-f") 'find-file)
 (define-key prelude-mode-map (kbd "H-f") 'fzf-git-files)
+(define-key prelude-mode-map (kbd "H-o") 'fzf-git-files)
 
 (global-set-key (kbd "C-w") 'kill-region)
 
-(global-set-key (kbd "M-l") 'goto-line)
+;;(global-set-key (kbd "M-l") 'goto-line)
 (global-set-key (kbd "C-l") 'recenter-top-bottom)
 
 (global-set-key (kbd "H-; l") 'flycheck-list-errors)
