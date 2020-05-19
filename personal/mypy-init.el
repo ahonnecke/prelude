@@ -30,7 +30,7 @@
 ;;     ((error line-start (file-name) ":" line ": error:" (message) line-end))
 ;;     :modes python-mode)
 
-(add-to-list 'flycheck-checkers 'python-mypy t)
+;; (add-to-list 'flycheck-checkers 'python-mypy 'lsp t)
 (flycheck-add-next-checker 'python-pylint 'python-mypy t)
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 ;; (setq flycheck-check-syntax-automatically '(mode-enabled idle-change))

@@ -73,7 +73,7 @@
 ;;   :bind (("s-F" . helm-git-grep)))
 
 (use-package fzf
-  :bind (("h-F" . fzf-directory)))
+  :bind (("H-f" . fzf-directory)))
 
 (use-package helm-ag
   ;; Interactive ag queries using helm.

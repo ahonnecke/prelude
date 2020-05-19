@@ -1,3 +1,5 @@
+(use-package flycheck)
+
 (custom-set-variables
  '(flycheck-python-flake8-executable "python3")
  '(flycheck-python-pycompile-executable "python3")
@@ -15,3 +17,6 @@
 
 (add-hook 'flycheck-mode-hook
           (lambda () (global-set-key (kbd "H-; n") 'flycheck-next-error)))
+
+(add-hook 'flycheck-mode-hook
+          (lambda () (global-set-key (kbd "H-; p") 'flycheck-previous-error)))

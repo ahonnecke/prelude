@@ -48,9 +48,6 @@
 (when (version< emacs-version "25.1")
   (error "Prelude requires GNU Emacs 25.1 or newer, but you're running %s" emacs-version))
 
-;; Always load newest byte code
-(setq load-prefer-newer t)
-
 (defvar prelude-dir (file-name-directory load-file-name)
   "The root dir of the Emacs Prelude distribution.")
 (defvar prelude-core-dir (expand-file-name "core" prelude-dir)
@@ -118,30 +115,13 @@ This is DEPRECATED, use %s instead." prelude-modules-file))
 (require 'prelude-editor)
 (require 'prelude-global-keybindings)
 
-;; macOS specific settings
-(when (eq system-type 'darwin)
-  (require 'prelude-macos))
-
 ;; Linux specific settings
-(when (eq system-type 'gnu/linux)
-  (require 'prelude-linux))
+(require 'prelude-linux)
 
 (message "Loading Prelude's modules...")
 
 ;; the modules
-(if (file-exists-p prelude-modules-file)
-    (progn
-      (load prelude-modules-file)
-      (if (file-exists-p prelude-deprecated-modules-file)
-          (message "Loading new modules configuration, ignoring DEPRECATED prelude-module.el")))
-  (if (file-exists-p prelude-deprecated-modules-file)
-      (progn
-        (load prelude-deprecated-modules-file)
-        (message (format "The use of %s is DEPRECATED! Use %s instead!"
-                         prelude-deprecated-modules-file
-                         prelude-modules-file)))
-    (message "Missing modules file %s" prelude-modules-file)
-    (message "You can get started by copying the bundled example file from sample/prelude-modules.el")))
+(load prelude-modules-file)
 
 ;; config changes made through the customize UI will be stored here
 (setq custom-file (expand-file-name "custom.el" prelude-personal-dir))
@@ -153,16 +133,14 @@ This is DEPRECATED, use %s instead." prelude-modules-file))
                prelude-modules-file
                (directory-files prelude-personal-dir 't "^[^#\.].*\\.el$"))))
 
-(message "Prelude is ready to do thy bidding, Master %s!" current-user)
-
-;; Patch security vulnerability in Emacs versions older than 25.3
-(when (version< emacs-version "25.3")
-  (with-eval-after-load "enriched"
-    (defun enriched-decode-display-prop (start end &optional param)
-      (list start end))))
 
 (prelude-eval-after-init
  ;; greet the use with some useful tip
+
  (run-at-time 5 nil 'prelude-tip-of-the-day))
+
+;; Always load newest byte code
+(setq load-prefer-newer t)
+
 
 ;;; init.el ends here
