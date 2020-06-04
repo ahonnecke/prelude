@@ -134,10 +134,10 @@ This is DEPRECATED, use %s instead." prelude-modules-file))
                (directory-files prelude-personal-dir 't "^[^#\.].*\\.el$"))))
 
 
-(prelude-eval-after-init
+;;(prelude-eval-after-init
  ;; greet the use with some useful tip
 
- (run-at-time 5 nil 'prelude-tip-of-the-day))
+;; (run-at-time 5 nil 'prelude-tip-of-the-day))
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
